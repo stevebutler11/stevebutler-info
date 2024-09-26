@@ -1,6 +1,8 @@
 import Me from "./me.jpg";
 import Image from "next/image";
 
+export const runtime = "edge";
+
 export default function About() {
   return (
     <main>

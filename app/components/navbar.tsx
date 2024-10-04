@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 
-import { ThemeDropdown } from "./ThemeDropdown";
-import NavLinkDropdown from "./NavLinkDropdown";
+import { ThemeDropdown } from "./themeDropdown";
+import NavLinkDropdown from "./navLinkDropdown";
 import { useEffect, useState } from "react";
 
-export default function Navbar() {
+const Navbar = () => {
   const pages = ["posts", "projects", "about"];
 
   const [top, setTop] = useState<boolean>(true);
@@ -20,13 +20,16 @@ export default function Navbar() {
   }, [top]);
 
   return (
-    <nav className={`p-4 flex flex-row justify-between items-center h-16 sticky top-0 ${!top &&`backdrop-filter backdrop-blur-md bg-opacity-40 z-10 shadow-md`}`}>
+    <nav
+      className={`p-4 flex flex-row justify-between items-center h-16 sticky top-0 ${
+        !top && `backdrop-filter backdrop-blur-md bg-opacity-40 z-10 shadow-md`
+      }`}
+    >
       <Link href="/">
         <h1 className="text-2xl font-light">SB</h1>
       </Link>
 
       <div className="flex flex-row items-center">
-        
         {/* drop down nav links */}
         <div className="md:hidden pr-4">
           <NavLinkDropdown pages={pages} />
@@ -44,4 +47,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;

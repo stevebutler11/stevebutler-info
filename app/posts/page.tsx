@@ -1,11 +1,14 @@
-export const runtime = "edge";
+import AllPosts from "@/app/components/allPosts";
 
-export default function About() {
+const Page = () => {
   return (
     <main>
       <h3 className="text-4xl py-4">Posts</h3>
       <section>
+        <AllPosts />
       </section>
     </main>
   );
-}
+};
+
+export default Page;

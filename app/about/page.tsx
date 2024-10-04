@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const runtime = "edge";
 
-export default function About() {
+const Page = () => {
   return (
     <main>
       <h3 className="text-4xl py-4">About Me</h3>
@@ -21,4 +21,6 @@ export default function About() {
       </section>
     </main>
   );
-}
+};
+
+export default Page;

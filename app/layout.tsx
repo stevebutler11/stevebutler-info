@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
+import { ThemeProvider } from "@/app/components/theme-provider";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -11,14 +11,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Steve Butler",
-  description: "The website of Steve Butler"
+  description: "The website of Steve Butler",
 };
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -39,4 +39,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

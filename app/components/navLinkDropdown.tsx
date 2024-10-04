@@ -3,7 +3,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/app/components/ui/dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";

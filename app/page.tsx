@@ -39,8 +39,7 @@ export default function Home() {
         >
           LinkedIn
         </Link>
-        , or you can email me at{" "}
-        <p className="italic">contact at stevebutler dot info</p>
+        , or you can email me at <em>contact at stevebutler dot info</em>
       </p>
     </main>
   );

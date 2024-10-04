@@ -1,10 +1,11 @@
 export const runtime = "edge";
 
-export default function Projects() {
+const Page = () => {
   return (
     <main>
       <h3 className="text-4xl py-4">Projects</h3>
-
     </main>
-  )
-}
+  );
+};
+
+export default Page;

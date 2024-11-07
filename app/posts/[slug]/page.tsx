@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { baseUrl } from "../../sitemap";
-import { formatDate, getPosts } from "../utils";
+import { formatDate, getPosts } from "../../mdxUtils/utils";
 import { CustomMDX } from "@/app/components/mdx";
 
 export const generateStaticParams = async () => {

@@ -1,4 +1,4 @@
-import { getPosts } from "./posts/utils";
+import { getPosts } from "./mdxUtils/utils";
 
 export const baseUrl = "https://stevebutler.info";
 

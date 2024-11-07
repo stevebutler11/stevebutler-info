@@ -1,4 +1,4 @@
-import { formatDate, getProjects } from "@/app/posts/utils";
+import { formatDate, getProjects } from "@/app/mdxUtils/utils";
 import Link from "next/link";
 
 const AllProjects = () => {

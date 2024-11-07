@@ -1,4 +1,4 @@
-import { formatDate, getPosts } from "@/app/posts/utils";
+import { formatDate, getPosts } from "@/app/mdxUtils/utils";
 import Link from "next/link";
 
 const AllPosts = () => {

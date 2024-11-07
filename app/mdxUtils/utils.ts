@@ -54,6 +54,10 @@ export const getPosts = () => {
   return getMDXData(path.join(process.cwd(), "app", "posts", "_posts"));
 };
 
+export const getProjects = () => {
+  return getMDXData(path.join(process.cwd(), "app", "projects", "_projects"));
+};
+
 export const formatDate = (date: string, includeRelative = false) => {
   const currentDate = new Date();
   if (!date.includes("T")) {

@@ -1,5 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
+import Image from "next/image";
+import remarkGfm from 'remark-gfm'
 
 const components = {
   h1: ({ children }) => (
@@ -12,12 +14,23 @@ const components = {
     <h3 className="text-xl lg:text-2xl font-thin mb-2 mt-4">{children}</h3>
   ),
   p: ({ children }) => <p className="text-justify lg:leading-7">{children}</p>,
+  img: ({ alt, src }) => (
+    <Image src={src} alt={alt} />
+  ),
+  ul: ({ children }) => <p>{children}</p>,
 };
 
 type Props = {
   source: string;
 };
 
+const options = {
+  mdxOptions: {
+      remarkPlugins: [remarkGfm],
+      rehypePlugins: [],
+  }
+}
+
 export const CustomMDX = (props: Props) => {
-  return <MDXRemote {...props} components={{ ...components }} />;
+  return <MDXRemote {...props} components={{ ...components }} options={options} />;
 };

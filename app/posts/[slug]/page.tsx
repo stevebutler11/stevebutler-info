@@ -12,8 +12,8 @@ export const generateStaticParams = async () => {
 };
 
 type Props = {
-  params: { slug: string }
-}
+  params: { slug: string };
+};
 
 export const generateMetadata = ({ params }: Props) => {
   const post = getPosts().find((post) => post.slug === params.slug);
@@ -94,7 +94,7 @@ const Page = ({ params }: Props) => {
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
-      <article className="prose">
+      <article className="prose prose-headings:text-foreground prose-p:text-foreground prose-td:text-foreground prose-li:text-foreground marker:text-foreground !max-w-6xl">
         <CustomMDX source={post.content} />
       </article>
     </section>

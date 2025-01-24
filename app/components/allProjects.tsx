@@ -23,15 +23,15 @@ const AllProjects = () => {
             className="group flex flex-col items-center"
           >
             <Image
-              className="w-full h-48 object-cover rounded-lg shadow-md group-hover:opacity-90 transition-opacity"
+              className="w-full h-48 object-cover rounded-2xl shadow-md group-hover:opacity-90 transition-opacity"
               src={
                 post.metadata.image
                   ? post.metadata.image
                   : "/images/default_project.png"
               }
               alt={post.metadata.title}
-              width={200}
-              height={200}
+              width={1000}
+              height={1000}
             />
             <div className="text-center mt-3">
               <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">

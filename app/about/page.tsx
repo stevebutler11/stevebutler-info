@@ -1,4 +1,4 @@
-import Me from "./me.jpg";
+import Me from "../../public/images/me.jpg";
 import Image from "next/image";
 
 export const runtime = "edge";
@@ -14,8 +14,10 @@ const Page = () => {
             src={Me}
             alt="A picture of the author"
             className="rounded-full border-secondary border-2"
-            width={200}
-            height={200}
+            style={{
+              width: '40%',
+              height: 'auto',
+            }}
           />
         </div>
       </section>
